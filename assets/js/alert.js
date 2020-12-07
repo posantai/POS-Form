@@ -1,0 +1,3 @@
+function tutup() {
+    alert('kontol');
+}
