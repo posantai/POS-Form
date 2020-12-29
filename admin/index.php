@@ -22,14 +22,15 @@ if(isset($_POST['submit'])) {
         $log->execute();
         $log->store_result();
         $jml = $log->num_rows();
-        $log->bind_result($username, $password, $id, $name);
+        $log->bind_result($username, $password, $id, $name, $avatar);
         $log->fetch();
 
         if($jml) {
             if(password_verify($pass, $password)) {
                 $_SESSION['id_admin'] = $id;
                 $_SESSION['user'] = $name;
-
+                $_SESSION['avatar'] = $avatar;
+ 
                 header('location:./dashboard.php');
             } else {
                 echo '<script type="text/javascript">alert("Password Salah");</script>';

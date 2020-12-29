@@ -6,15 +6,17 @@
 				                    <!--- Identitas -->
 		<h2>Identitas</h2>
 		    <label>Nama</label>
-		        <input type="text" Name="nameIG" placeholder="Name" maxlength="100" required=""><br>
+		        <input type="text" Name="name_IG" placeholder="Name" maxlength="100" required=""><br>
 		    <label>Umur</label>
-		        <input type="text" Name="ageIG" placeholder="Age" maxlength="2" required=""><br>
+		        <input type="text" Name="age_IG" placeholder="Age" maxlength="2" required=""><br>
 		    <label>Tempat Tinggal</label>
-		        <input type="text" Name="liveIG" placeholder="Residence" maxlength="200" required=""><br>
+                <input type="text" Name="live_IG" placeholder="Residence" maxlength="200" required=""><br>
+            <label>Username Discord</label>
+                <input type="text" Name="discord_IG" placeholder="Username" maxlength="100"><br>
 		    <label>Link Facebook</label>
-		        <input type="text" Name="fbURL" placeholder="Facebook URL" maxlength="100" required=""><br>
+		        <input type="text" Name="facebook_IG" placeholder="Facebook URL" maxlength="100" required=""><br>
 		    <label>Link Instagram</label>
-		        <input type="text" Name="urlIG" placeholder="Instagram URL" maxlength="100" required=""><br><br><br>
+		        <input type="text" Name="url_IG" placeholder="Instagram URL" maxlength="100" required=""><br><br><br>
 
 				                <!--- Perihal Seputar Staff -->
 		<h2>Perihal Seputar Staff</h2>
@@ -50,13 +52,18 @@
                                         <!--- Identitas -->
         <h2>Identitas</h2>
             <label>Nama</label>
-                <input type="text" Name="nameFB" placeholder="Name" maxlength="100" required=""><br>
+                <input type="text" Name="name_FB" placeholder="Name" maxlength="100" required=""><br>
             <label>Umur</label>
-                <input type="text" Name="ageFB" placeholder="Age" maxlength="2" required=""><br>
+                <input type="text" Name="age_FB" placeholder="Age" maxlength="2" required=""><br>
             <label>Tempat Tinggal</label>
-                <input type="text" Name="liveFB" placeholder="Residence" maxlength="200" required=""><br>
+                <input type="text" Name="live_FB" placeholder="Residence" maxlength="200" required=""><br>
+            <label>Username Discord</label>
+                <input type="text" Name="discord_FB" placeholder="Username" maxlength="200" required=""><br>
             <label>Link Facebook</label>
-                <input type="text" Name="urlFB" placeholder="Facebook URL" maxlength="100" required=""><br><br><br>
+                <input type="text" Name="url_FB" placeholder="Facebook URL" maxlength="100" required=""><br>
+            <label>Link Instagram (Opsional)</label>
+                <input type="text" Name="instagram_FB" placeholder="Instagram URL" maxlength="100">
+                <br><br><br>
 
                                 <!--- Perihal Seputar Staff -->
         <h2>Perihal Seputar Staff</h2>
@@ -99,11 +106,15 @@
                                         <!--- Identitas -->
         <h2>Identitas</h2>
             <label>Nama Lengkap</label>
-                <input type="text" Name="namaDC" placeholder="Name" maxlength="100" required=""><br>
+                <input type="text" Name="name_DC" placeholder="Name" maxlength="100" required=""><br>
             <label>Umur</label>
-                <input type="text" Name="ageDC" placeholder="Age" maxlength="2" required=""><br>
+                <input type="text" Name="age_DC" placeholder="Age" maxlength="2" required=""><br>
             <label>Username Discord</label>
-                <input type="text" Name="userDC" placeholder="ManLord#3143" maxlength="100" required=""><br>
+                <input type="text" Name="url_DC" placeholder="ManLord#3143" maxlength="100" required=""><br>
+            <label>Link Facebook (Opsional)</label>
+                <input type="text" Name="facebook_DC" placeholder="Facebook URL" maxlength="100"><br>
+            <label>Link Instagram (Opsional)</label>
+                <input type="text" Name="instagram_DC" placeholder="Instagram URL" maxlength="100"><br><br><br>
 
                                 <!--- Perihal Seputar Staff -->
         <h2>Perihal Seputar Staff</h2>

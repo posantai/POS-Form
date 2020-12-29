@@ -10,13 +10,14 @@
 	<nav>
 		<ul>
 		<?php 
-		require('./includes/connection.php');
 
 		$sql = mysqli_query($connection, "SELECT * FROM t_platform");
 		if(mysqli_num_rows($sql) > 0) {
-			
+
 			while($data = mysqli_fetch_array($sql)) {
-				echo "<li><a href='#{$data['platform']}'>{$data['platform']}</a></li>";
+				$opsi = "#{$data['platform']}";
+				if($data['status'] == 'N') $opsi = '?page=tutup';
+				echo "<li><a href='{$opsi}'>{$data['platform']}</a></li>";
 			}
 		}
 		?>

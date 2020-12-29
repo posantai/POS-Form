@@ -6,6 +6,50 @@
  *     // code here
  * });
  */
+
+const ui = {
+	confirm: async (message) => createConfirm(message)
+}
+
+const createConfirm = (message) => {
+	return new Promise((complete, failed) => {
+		$('#confirmMessage').text(message)
+
+		$('#confirmYes').off('click');
+		$('#confirmNo').off('click');
+
+		$('#confirmYes').on('click', () => { $('.confirm').hide(); complete(true); });
+		$('#confirmNo').on('click', () => { $('.confirm').hide(); complete(false); });
+
+		$('.confirm').show();
+	});
+}
+
+const saveForm = async () => {
+	const confirm = await ui.confirm('Are you sure you want to do this?');
+
+	if (confirm) {
+		alert('yes clicked');
+	} else {
+		alert('no clicked');
+	}
+}
+
+// custom confirm
+$(function () {
+	$('[data-confirm]').each(function () {
+		dialog($(this), $(this).attr('data-confirm'));
+	});
+
+	dialog($('#customCallback'), "dialog with custom callback", function () {
+
+		alert("hi there");
+
+	});
+
+});
+
+
 (function ($, sr) {
 	// debouncing function from John Hann
 	// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
@@ -4081,7 +4125,7 @@ function init_echarts() {
 			legend: {
 				x: 'center',
 				y: 'bottom',
-				data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6']
+				data: ['Facebook', 'Instagram', 'Discord']
 			},
 			toolbox: {
 				show: true,
@@ -4119,15 +4163,6 @@ function init_echarts() {
 				}, {
 					value: 15,
 					name: 'rose3'
-				}, {
-					value: 25,
-					name: 'rose4'
-				}, {
-					value: 20,
-					name: 'rose5'
-				}, {
-					value: 35,
-					name: 'rose6'
 				}]
 			}]
 		});

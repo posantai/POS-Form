@@ -2,7 +2,7 @@
 define('BASEPATH', dirname(__FILE__));
 
 	#ini buat webhook
-	require('./includes/webhook.php');
+	require('./includes/submit.php');
 	require('./includes/connection.php');
 ?>
 
@@ -42,10 +42,12 @@ define('BASEPATH', dirname(__FILE__));
         if (isset($_GET['page'])) {
              switch ($_GET['page']) {
              case 'thanks':
-             include('./thanks.php');
-             break;
+             	include('./thanks.php');
+			 break;
+			 case 'tutup':
+				echo '<script>alert("Mohon Maaf, saat ini sedang tidak open Staff 😁")</script>';
 			 default:
-             include('./menu.php');
+             	include('./menu.php');
 			 break;
           	 }
         } else {
